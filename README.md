@@ -1,0 +1,3 @@
+# `sys_info`
+This is primarily meant as an exercise to learn Rust, but should at least serve the purpose of being used as a tool that gathers additional information when used as a custom fact for ansible.
+For this, compile the code via `cargo build --release`, then place the binary `target/release/sys_info` into the `/etc/ansible/facts.d/` folder on the machines you want the additional information, and add the `.fact` extension, such that ansible knows to use it (e.g. `sys_info.fact`). You can test it locally with `ansible localhost -m setup`, and search the output for the `ansible_local` section, which will then contain a dictionary with the information. 
