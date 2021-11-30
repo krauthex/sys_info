@@ -2,12 +2,11 @@ use std::process::Command;
 use serde::{Serialize};
 use serde_json::Result;
 
-fn serialize_cmd_output(infos: &Vec<Cmd>) -> Result<()> {
+fn serialize_cmd_output(infos: &[Cmd]) -> Result<()> {
     println!("{}", serde_json::to_string(infos)?);
     Ok(())
 }
 
-#[derive(Debug)]
 #[derive(Serialize)]
 struct Cmd {
     cmd: String,
