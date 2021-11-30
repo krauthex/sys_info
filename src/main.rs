@@ -19,8 +19,10 @@ fn main() {
 
     let cmds = vec![
         "python -V", 
-        "docker version --format '{{ .Client.Version }}'", 
-        "python2 -V"
+        "python2 -V",
+        "conda -V",
+        "docker version --format 'client: {{ .Client.Version }}, api: {{ .Client.APIVersion }}'", 
+        
     ];
     
     let mut infos: Vec<Cmd> = Vec::new();
