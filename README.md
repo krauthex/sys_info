@@ -15,16 +15,22 @@ You can test it locally with `ansible localhost -m setup`, and search the output
 	    "stdout": "Python 3.9.5"
 	},
 	{
-	    "cmd": "docker",
-	    "status": 0,
-	    "stderr": "",
-	    "stdout": "20.10.10"
-	},
-	{
 	    "cmd": "python2",
 	    "status": 127,
 	    "stderr": "sh: line 1: python2: command not found",
 	    "stdout": ""
+	},
+	{
+	    "cmd": "conda",
+	    "status": 0,
+	    "stderr": "",
+	    "stdout": "conda 4.10.3"
+	},
+	{
+	    "cmd": "docker",
+	    "status": 0,
+	    "stderr": "",
+	    "stdout": "client: 20.10.10, api: 1.41"
 	}
     ]
 },
